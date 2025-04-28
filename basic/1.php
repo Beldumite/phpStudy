@@ -1,4 +1,5 @@
-//this is some basic php syntax
+<!-- this is some basic php syntax -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
 <body>
 <?php 
     echo "hello world";
+    //test
 ?>
     
 </body>
