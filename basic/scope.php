@@ -15,7 +15,7 @@ function test() {
     $you = "reader"; //this is local
     static $num = 123; //this is static
 
-    echo " has killed " . $you . " with " . $num . " damage";
+    echo " has killed $you with $num damage";
 }
 
 test();
