@@ -1,0 +1,89 @@
+Some predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - and you can access them from any function, class or file without having to do anything special.
+
+The PHP superglobal variables are:
+
+$GLOBALS
+$_SERVER
+$_REQUEST
+$_POST
+$_GET
+$_FILES
+$_ENV
+$_COOKIE
+$_SESSION
+
+1. $_GET
+What it is for: Collects data sent via the URL parameters (query strings).
+
+Example: example.com/page.php?name=ainur
+
+Use: $_GET['name'] returns "ainur"
+
+
+2. $_POST
+What it is for: Collects data sent through HTML forms using the POST method.
+
+More secure than $_GET for sensitive data.
+
+Use: $_POST['username'] gets the input from a form field named username.
+
+
+3. $_REQUEST
+What it is for: Collects data from both $_GET, $_POST, and $_COOKIE.
+
+Note: It's more general, but less predictable — not recommended for security-sensitive tasks.
+
+
+4. $_SESSION
+What it is for: Stores data across multiple page requests (for a specific user).
+Common use: Login sessions ($_SESSION['user_id'] = 5;).
+Needs: session_start(); must be called at the top of the script.
+
+
+5. $_COOKIE
+What it is for: Stores small data in the user's browser, sent with every request.
+
+Example: Remembering preferences, user tokens, etc.
+
+Use: $_COOKIE['theme']
+
+
+6. $_FILES
+What it is for: Handles file uploads via forms.
+
+Use: $_FILES['profile_pic']['name'] to get the uploaded file name.
+
+
+7. $_ENV
+What it is for: Accesses environment variables (like system-level config).
+
+Use: $_ENV['PATH']
+
+Often used with .env files or putenv().
+
+
+8. $_SERVER
+What it is for: Gives information about the server and the request.
+
+Examples:
+
+$_SERVER['HTTP_USER_AGENT']: Info about user's browser.
+
+$_SERVER['REQUEST_METHOD']: Whether it's a GET, POST, etc.
+
+$_SERVER['SERVER_NAME'], $_SERVER['REMOTE_ADDR'], etc.
+
+
+9. $GLOBALS
+What it is for: Accesses global variables from anywhere in the script.
+
+Example:
+
+<?php 
+
+$x = 10;
+function test() {
+  echo $GLOBALS['x']; // Outputs 10
+}
+
+
