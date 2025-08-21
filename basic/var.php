@@ -18,6 +18,8 @@ $bool = true;
 $nul = null;
 $arr = [];
 
+$Pokemon = "Pikachu";
+
 var_dump($nul);
 var_dump($float);
 var_dump($num);

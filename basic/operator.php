@@ -39,6 +39,7 @@ var_dump($trueVar and $falseVar); // false
 var_dump($trueVar or $falseVar);  // true
 var_dump($trueVar xor $falseVar); // true
 
+ 
 //conditional
 $user = "Ainur";
 $status = (empty($user)) ? "anonymous" : "logged in";
