@@ -1,5 +1,25 @@
 <?php 
 
+$a = 13;
+$b = 13;
+
+
+if ( $a > $b ) {
+    echo "a = $a <br>";
+    echo "b = $b <br>";
+    echo "a is bigger than b";
+} else if ( $a < $b ) {
+    echo "b is bigger than a <br>";
+} else {
+    echo "a and b has the same value <br>";
+}
+    
+
+
+
+
+
+
 $x = 5;
 $y = 4;
 
